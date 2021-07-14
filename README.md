@@ -19,12 +19,12 @@ module "secrets_engine" {
 ## Import current secrets_engine
 
 ```sh
-terraform import module.secrets_engine.vault_mount.this secretName
+terraform import module.secrets_engine.vault_mount.default secretName
 terraform show
 # Copy your variables in current module
 terraform plan -out tfplan
 
-  ~ resource "vault_mount" "this" {
+  ~ resource "vault_mount" "default" {
         accessor                  = "kv_493c7v22"
         default_lease_ttl_seconds = 0
         id                        = "secretName"

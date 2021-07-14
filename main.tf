@@ -1,4 +1,4 @@
-resource "vault_mount" "this" {
+resource "vault_mount" "default" {
   path                      = var.path
   type                      = var.type
   description               = var.description
